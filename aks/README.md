@@ -18,3 +18,6 @@
 
 [Tutorial](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux)
 
+#### ~/.kube/config
+
+After all process above, you could find the default configuration of kubernetes in the title path 
