@@ -1,5 +1,7 @@
-# RBAC-Enabled-K8S-OpenPAI
+### RBAC-Enabled-K8S-OpenPAI
 Deploy OpenPAI on the k8s with RBAC
+
+### Deploy k8s-Dashboard for OpenPAI
 
 ### Build paictl-env image for batch-job (Optional)
 
@@ -33,3 +35,7 @@ kubectl create -f paictl-sa.yaml
 ##### Write you cluster configuration
 
 [OpenPAI's configuration example](https://github.com/microsoft/pai/tree/pai-0.14.y/examples/cluster-configuration)
+
+##### Create a configmap for the Patch Job to mount
+
+
