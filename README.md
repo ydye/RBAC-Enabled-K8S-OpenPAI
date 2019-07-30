@@ -3,6 +3,13 @@ Deploy OpenPAI on the k8s with RBAC
 
 ### Deploy k8s-Dashboard for OpenPAI
 
+```bash
+cd dashboard/
+cp dashboard.yaml dashboard.fin.yaml
+sed -i "s/{nodename}/${YOUR_NODE_NAME}/g" dashboard.fin.yaml
+kubectl create -f dashboard.fin.yaml
+```
+
 ### Build paictl-env image for batch-job (Optional)
 
 ##### Build

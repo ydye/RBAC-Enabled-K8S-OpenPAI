@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    k8s-app: openpai-paictl
+  name: openpai-paictl
+  namespace: default
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      k8s-app: openpai-paictl
+  template:
+    metadata:
+      labels:
+        k8s-app: openpai-paictl
+    spec:
+      hostNetwork: true
+      containers:
+      - name: kubernetes-dashboard-openpai
+        securityContext:
+          privileged: true
+        image: {image_url}
+        imagePullPolicy: Always
+        volumeMounts:
+        - mountPath: /var/run/docker.sock
+          name: docker-socket
+      volumes:
+      - name: docker-socket
+        hostPath:
+          path: /var/run/docker.sock
+      serviceAccountName: paictl
