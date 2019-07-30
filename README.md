@@ -35,6 +35,7 @@ sudo docker push ${your_registry_url}/openpai-batch
 ```bash
 cd paictl
 kubectl create -f paictl-sa.yaml
+kubectl create -f paictl.yaml
 ``` 
 
 ### Prepare your cluster configuration

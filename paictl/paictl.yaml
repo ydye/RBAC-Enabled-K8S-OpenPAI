@@ -26,6 +26,8 @@ spec:
         volumeMounts:
         - mountPath: /var/run/docker.sock
           name: docker-socket
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 3000; done;" ]
       volumes:
       - name: docker-socket
         hostPath:
