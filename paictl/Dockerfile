@@ -115,6 +115,4 @@ RUN rm -rf /tmp/*
 
 WORKDIR /
 
-RUN git clone https://github.com/microsoft/pai.git
-
 CMD ["/bin/bash"]
